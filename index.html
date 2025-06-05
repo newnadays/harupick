@@ -1,92 +1,75 @@
-import React from "react";
-import { Mail, Phone, Instagram } from "lucide-react";
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>하루픽 | HaruPick</title>
+    <link href="output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gradient-to-b from-white to-sky-50 text-gray-800 font-sans">
+    <!-- Hero Section -->
+    <section class="text-center py-20 px-4 bg-white shadow-sm">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-sky-700 mb-4">당신의 하루를 리셋하는 작은 픽</h1>
+      <p class="text-xl md:text-2xl text-gray-600">구글 냉장고에서 꺼낸 듯한 감성 웰니스 푸드, 하루픽</p>
+      <a href="#contact" class="inline-block mt-8 bg-sky-600 text-white px-8 py-4 rounded-full shadow-lg hover:bg-sky-700 transition">
+        도입 문의하기
+      </a>
+    </section>
 
-export default function HaruPickLanding() {
-  return (
-    <div className="min-h-screen bg-white text-gray-800 font-sans">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-sky-100 to-white py-24 px-6 text-center">
-        <h1 className="text-5xl md:text-6xl font-bold text-sky-700 mb-4">
-          당신의 하루를 리셋하는 작은 픽
-        </h1>
-        <p className="text-xl text-gray-600 mb-8">
-          구글 냉장고에서 꺼낸 듯한 감성 웰니스 푸드, 하루픽
+    <!-- Product Section -->
+    <section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
+      <img src="images/harupick-kit.png" alt="HaruPick Kit" class="rounded-2xl shadow-lg" />
+      <div class="space-y-5">
+        <h2 class="text-4xl font-bold text-sky-600">하루픽이란?</h2>
+        <p class="text-gray-700 text-lg">
+          IT기업 MZ세대 직장인을 위한 이중 용기 웰니스 간식 키트입니다.
         </p>
-        <a
-          href="#contact"
-          className="bg-sky-600 hover:bg-sky-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-md transition"
-        >
-          도입 문의하기
-        </a>
-      </section>
+        <ul class="list-disc list-inside space-y-2 text-gray-700">
+          <li>아래층: 그릭요거트 + 그래놀라 + 블루베리</li>
+          <li>위층: 프리미엄 방울토마토</li>
+          <li>집중력 향상, 브레인 푸드</li>
+          <li>실리콘밸리 감성의 미니멀 패키징</li>
+        </ul>
+      </div>
+    </section>
 
-      {/* Product Section */}
-      <section className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <img
-          src="/images/harupick-kit.png"
-          alt="HaruPick Kit"
-          className="rounded-3xl shadow-xl"
-        />
-        <div className="space-y-6">
-          <h2 className="text-4xl font-bold text-sky-600">하루픽이란?</h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            IT기업 MZ세대 직장인을 위한 이중 용기 웰니스 간식 키트입니다.
-          </p>
-          <ul className="space-y-3 text-gray-700 text-base list-disc list-inside">
-            <li>아래층: 그릭요거트 + 그래놀라 + 블루베리</li>
-            <li>위층: 프리미엄 방울토마토</li>
-            <li>집중력 향상, 브레인 푸드</li>
-            <li>실리콘밸리 감성의 미니멀 패키징</li>
-          </ul>
+    <!-- Benefits Section -->
+    <section class="bg-sky-50 py-20 px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-sky-700 mb-10">기업 도입 효과</h2>
+      <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <div class="text-4xl mb-3">😊</div>
+          <p class="text-lg font-medium text-gray-700">직원 만족도 향상</p>
         </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="bg-sky-50 py-24 px-6 text-center">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-sky-700 mb-12">기업 도입 효과</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { title: "직원 만족도 향상", emoji: "😊" },
-              { title: "집중력 & 생산성 증대", emoji: "🧠" },
-              { title: "웰빙 이미지 강화", emoji: "🍃" },
-              { title: "간편한 공급 시스템", emoji: "📦" },
-            ].map(({ title, emoji }) => (
-              <div
-                key={title}
-                className="bg-white p-8 rounded-3xl shadow-md hover:shadow-xl transition"
-              >
-                <div className="text-5xl mb-4">{emoji}</div>
-                <p className="text-lg font-semibold text-gray-700">{title}</p>
-              </div>
-            ))}
-          </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <div class="text-4xl mb-3">🧠</div>
+          <p class="text-lg font-medium text-gray-700">집중력 & 생산성 증대</p>
         </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="bg-white py-24 px-6 text-center">
-        <h2 className="text-4xl font-bold text-sky-700 mb-6">하루픽 상담 및 도입 문의</h2>
-        <p className="text-gray-600 text-lg mb-8">
-          도입 상담을 원하시면 아래 연락처로 문의해주세요.
-        </p>
-        <div className="space-y-4 text-gray-700 text-lg">
-          <div className="flex items-center justify-center gap-3">
-            <Mail className="w-5 h-5" /> contact@harupick.kr
-          </div>
-          <div className="flex items-center justify-center gap-3">
-            <Phone className="w-5 h-5" /> 070-xxxx-xxxx
-          </div>
-          <div className="flex items-center justify-center gap-3">
-            <Instagram className="w-5 h-5" /> @haru.pick
-          </div>
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <div class="text-4xl mb-3">🍃</div>
+          <p class="text-lg font-medium text-gray-700">웰빙 이미지 강화</p>
         </div>
-      </section>
+        <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+          <div class="text-4xl mb-3">📦</div>
+          <p class="text-lg font-medium text-gray-700">간편한 공급 시스템</p>
+        </div>
+      </div>
+    </section>
 
-      {/* Footer */}
-      <footer className="bg-sky-700 text-white text-center py-6">
-        <p>&copy; {new Date().getFullYear()} HaruPick. All rights reserved.</p>
-      </footer>
-    </div>
-  );
-}
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-white text-center">
+      <h2 class="text-3xl font-bold text-sky-700 mb-4">하루픽 상담 및 도입 문의</h2>
+      <p class="text-gray-600 mb-6">도입 상담을 원하시면 아래 연락처로 문의해주세요.</p>
+      <div class="space-y-3 text-gray-700 text-lg">
+        <div>📧 contact@harupick.kr</div>
+        <div>📞 070-xxxx-xxxx</div>
+        <div>📷 @haru.pick</div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-sky-600 text-white text-center py-6">
+      <p>&copy; 2025 HaruPick. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
