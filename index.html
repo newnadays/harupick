@@ -1,0 +1,71 @@
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Mail, Phone, Instagram } from "lucide-react";
+
+export default function HaruPickLanding() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-white to-sky-50 text-gray-800 p-6 space-y-12">
+      {/* Hero Section */}
+      <section className="text-center space-y-4">
+        <h1 className="text-5xl font-bold text-sky-700">당신의 하루를 리셋하는 작은 픽</h1>
+        <p className="text-xl text-gray-600">
+          구글 냉장고에서 꺼낸 듯한 감성 웰니스 푸드, 하루픽
+        </p>
+        <Button className="mt-4 text-lg px-6 py-3 rounded-2xl shadow-md">도입 문의하기</Button>
+      </section>
+
+      {/* About HaruPick */}
+      <section className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+        <img src="/images/harupick-kit.png" alt="HaruPick Kit" className="rounded-2xl shadow-md" />
+        <div className="space-y-3">
+          <h2 className="text-2xl font-bold text-sky-600">하루픽이란?</h2>
+          <p>IT기업 MZ세대 직장인을 위한 이중 용기 웰니스 간식 키트입니다.</p>
+          <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <li>아래층: 그릭요거트 + 그래놀라 + 블루베리</li>
+            <li>위층: 프리미엄 방울토마토</li>
+            <li>집중력 향상, 브레인 푸드</li>
+            <li>실리콘밸리 감성의 미니멀 패키징</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Product Benefits */}
+      <section className="text-center">
+        <h2 className="text-3xl font-bold text-sky-600 mb-4">기업 도입 효과</h2>
+        <div className="grid md:grid-cols-4 gap-6">
+          {[
+            { title: "직원 만족도 향상", emoji: "😊" },
+            { title: "집중력 & 생산성 증대", emoji: "🧠" },
+            { title: "웰빙 이미지 강화", emoji: "🍃" },
+            { title: "간편한 공급 시스템", emoji: "📦" },
+          ].map(({ title, emoji }) => (
+            <Card key={title} className="rounded-2xl">
+              <CardContent className="p-6 text-center text-lg font-medium">
+                <div className="text-3xl mb-2">{emoji}</div>
+                {title}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="max-w-xl mx-auto text-center space-y-4">
+        <h2 className="text-2xl font-bold text-sky-600">하루픽 상담 및 도입 문의</h2>
+        <p>도입 상담을 원하시면 아래 연락처로 문의해주세요.</p>
+        <div className="space-y-2 text-gray-700">
+          <div className="flex items-center justify-center gap-2">
+            <Mail className="w-5 h-5" /> contact@harupick.kr
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <Phone className="w-5 h-5" /> 070-xxxx-xxxx
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <Instagram className="w-5 h-5" /> @haru.pick
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
